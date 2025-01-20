@@ -3,22 +3,12 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 
 import {
-  createBrowserRouter,
+
   RouterProvider,
 } from "react-router-dom"
-import Root from './layout/Root';
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    children: [
-      {
-        path: "/b",
-        element: <div>b is here</div>,
-      },
-    ],
-  },
-]);
+import { router } from './routes/Routes'
+
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
